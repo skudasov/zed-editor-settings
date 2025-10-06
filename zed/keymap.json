@@ -7,64 +7,35 @@
     }
   },
   {
-    "context": "Pane",
+    "context": "(VimControl && !menu)",
     "bindings": {
+      // tasks
+      "space t a": "task::Spawn",
+      // navigation
       "space -": "pane::SplitDown",
-      "space =": "pane::SplitRight"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl+shift+t": "pane::ReopenClosedItem",
-      "ctrl+t": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "shift-l": "vim::GoToTab"
-    }
-  },
-  {
-    "context": "(VimControl && !menu)",
-    "bindings": {
-      "shift-h": "vim::GoToPreviousTab"
-    }
-  },
-  {
-    "context": "VimControl",
-    "bindings": {
-      "g t": "vim::GoToTab"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "space f s": "project_symbols::Toggle"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-t": null
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "cmd-t": null
-    }
-  },
-  {
-    "bindings": {
-      "cmd-t": "workspace::NewCenterTerminal"
+      "space =": "pane::SplitRight",
+      "space t s": "tab_switcher::Toggle",
+      "shift-l": "vim::GoToTab",
+      "shift-h": "vim::GoToPreviousTab",
+      "space h": "workspace::ActivatePaneLeft",
+      "space j": "workspace::ActivatePaneDown",
+      "space k": "workspace::ActivatePaneUp",
+      "space l": "workspace::ActivatePaneRight",
+
+      // debugger
+      "space d s": "debugger::Start",
+      "space d S": "debugger::Stop",
+      "space d t": "debugger::ShowStackTrace",
+      "space d r": "debugger::Restart",
+      "space d i": "debugger::StepInto",
+      "space d o": "debugger::StepOver",
+      "space d u": "debugger::StepOut",
+      "space d c": "debugger::Continue",
+      "space d b": "editor::ToggleBreakpoint",
+      "space d p": "debugger::Pause",
+
+      // marks
+      "space m a": "vim::ToggleMarksView"
     }
   }
 ]

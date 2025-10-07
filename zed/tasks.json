@@ -1,5 +1,20 @@
 [
   {
+    "label": "lazygit",
+    "command": "lazygit",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "hide": "always",
+    "reveal": "always",
+    "cwd": "$ZED_DIRNAME",
+    "shell": {
+      "with_arguments": {
+        "program": "sh",
+        "args": ["--noediting", "--norc", "--noprofile"]
+      }
+    }
+  },
+  {
     "label": "Example Python task",
     "command": "python3",
     "args": [".zed/example_py_task.py"],
